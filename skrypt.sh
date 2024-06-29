@@ -7,7 +7,11 @@ case $OPTION in
         date
         ;;
     -l|--logs)
-        NUM=$2
+        if [[ $# -ge 2 ]]; then
+            NUM=$2
+        else 
+            NUM=100
+        fi
         for ((i=1; i<=$NUM; ++i)); do
             FILENAME="log$i.txt"
             echo "$FILENAME \nskrypt.sh \n$(date)" >> $FILENAME
@@ -22,5 +26,16 @@ case $OPTION in
     --init)
         git clone https://github.com/julfla1999/Podstawa-pracy-z-GIT.git
         echo "PATH=$PATH:$(pwd)" >> ~/.bashrc
+        ;;
+    -e|--error)
+        if [[ $# -ge 2 ]]; then
+            NUM=$2
+        else 
+            NUM=100
+        fi
+        for ((i=1; i<=$NUM; ++i)); do
+            FILENAME="error$i.txt"
+            echo "$FILENAME \nskrypt.sh \n$(date)" >> $FILENAME
+        done
         ;;
 esac
