@@ -13,4 +13,10 @@ case $OPTION in
             echo "$FILENAME \nskrypt.sh \n$(date)" >> $FILENAME
         done
         ;;
+    --help)
+        echo "Possible options are:"
+        echo "--date :\t prints out the current date"
+        echo "--logs x :\t creates x files titled log_number.txt; argument is optional"
+        echo "--help :\t prints help"
+        ;;
 esac
