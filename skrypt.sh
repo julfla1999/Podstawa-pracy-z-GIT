@@ -19,4 +19,8 @@ case $OPTION in
         echo "--logs x :\t creates x files titled log_number.txt; argument is optional"
         echo "--help :\t prints help"
         ;;
+    --init)
+        git clone https://github.com/julfla1999/Podstawa-pracy-z-GIT.git
+        echo "PATH=$PATH:$(pwd)" >> ~/.bashrc
+        ;;
 esac
