@@ -16,7 +16,9 @@ case $OPTION in
     -h|--help)
         echo "Possible options are:"
         echo "-d  --date :\t prints out the current date"
-        echo "-l x --logs x :\t creates x files titled log_number.txt"
+        echo "-l x --logs x :\t creates x files titled log_number.txt; argument is optional"
         echo "-h  --help :\t prints help"
+        echo "-e x --error x : creates x files titled error_number.txt; argument is optional"
+        echo "--init :\t clones the repository to the current catalog and updates PATH"
         ;;
 esac
