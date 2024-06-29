@@ -7,9 +7,10 @@ case $OPTION in
         date
         ;;
     --logs)
-        for ((i=1; i<=100; ++i)); do
+        NUM=$2
+        for ((i=1; i<=$NUM; ++i)); do
             FILENAME="log$i.txt"
-            echo "$FILENAME \nskrypt.sh \n$(date)" > $FILENAME
+            echo "$FILENAME \nskrypt.sh \n$(date)" >> $FILENAME
         done
         ;;
 esac
