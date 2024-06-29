@@ -15,8 +15,8 @@ case $OPTION in
         ;;
     -h|--help)
         echo "Possible options are:"
-        echo "--date :\t prints out the current date"
-        echo "--logs x :\t creates x files titled log_number.txt; argument is optional"
-        echo "--help :\t prints help"
+        echo "-d  --date :\t prints out the current date"
+        echo "-l x --logs x :\t creates x files titled log_number.txt"
+        echo "-h  --help :\t prints help"
         ;;
 esac
